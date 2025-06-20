@@ -1,0 +1,31 @@
+
+url for dataset: https://www.kaggle.com/datasets/mattiuzc/stock-exchange-data/code
+
+Stockholm eu-north-1
+
+CREATE DATABASE stockDB;
+
+MySQL [stockDB]> CREATE TABLE stockdata (
+    ->     id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     IndexName VARCHAR(10),
+    ->     Date DATE,
+    ->     Open DOUBLE,
+    ->     High DOUBLE,
+    ->     Low DOUBLE,
+    ->     Close DOUBLE,
+    ->     Adj_Close DOUBLE,
+    ->     Volume DOUBLE,
+    ->     CloseUSD DOUBLE
+    -> );
+
+
+##Consumer EC2 instance
+
+mysql -h 'stockdb.cnu60g6iqlqd.eu-north-1.rds.amazonaws.com' -u admin -p
+
+password: 4hRmqNgg32DFbrg3WHfm
+
+
+producer public IP: 51.20.181.252
+consumer public IP: 13.61.185.214
+server public IP: 13.60.70.157
